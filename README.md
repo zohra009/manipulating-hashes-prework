@@ -236,9 +236,7 @@ contacts
 
 ~~~validation
 
-answer = {"Jon Snow"=>{:name=>"Jon", :email=>"jon_snow@thewall.we", :favorite_icecream_flavors=>["chocolate", "vanilla", "mint chip"]}, "Freddy"=>{:name=>"Freddy", :email=>"freddy@mercury.com", :favorite_icecream_flavors=>["cookie dough", "mint chip"]}} 
-
-expect(response).to.eql(answer);
+expect(response).to.eql({"Jon Snow"=>{:name=>"Jon", :email=>"jon_snow@thewall.we", :favorite_icecream_flavors=>["chocolate", "vanilla", "mint chip"]}, "Freddy"=>{:name=>"Freddy", :email=>"freddy@mercury.com", :favorite_icecream_flavors=>["cookie dough", "mint chip"]}});
 
 ~~~
 
@@ -319,9 +317,7 @@ groceries.values.flatten
 
 ~~~validation
 
-answer = ["milk", "yogurt", "cheese", "carrots", "broccoli", "cucumbers", "chicken", "steak", "salmon", "rice", "pasta"]
-
-expect(response).to.eql(answer);
+expect(response).to.eql(["milk", "yogurt", "cheese", "carrots", "broccoli", "cucumbers", "chicken", "steak", "salmon", "rice", "pasta"]);
 
 ~~~
 
