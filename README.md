@@ -1,8 +1,8 @@
-# Manipulating Hashes
+# Code Along Exercise: Manipulating Hashes
 
 ## Objectives
 
-In this lesson, we'll be taking a closer look at multidimensional, or nested, hashes, iteration and higher level hash methods. We'll go through a few challenges together and then you'll complete the lab on your own. 
+In this lesson, we'll be taking a closer look at multidimensional, or nested, hashes, iteration and higher level hash methods. We'll go through a few challenges together before you move on to the next lab.  
 
 ## More On Building Nested Hashes 
 
@@ -15,7 +15,7 @@ contacts = {
     email: "jon_snow@thewall.we", 
     favorite_icecream_flavors: ["chocolate", "vanilla"]
   },
-  "Freddy" => {
+  "Freddy Mercury" => {
     name: "Freddy",
     email: "freddy@mercury.com",
     favorite_icecream_flavors: ["strawberry", "cookie dough", "mint chip"]
@@ -46,7 +46,7 @@ puts contacts
     email: "jon_snow@thewall.we", 
     favorite_icecream_flavors: ["chocolate", "vanilla", "mint chip"]
   },
-  "Freddy" => {
+  "Freddy Mercury" => {
     name: "Freddy",
     email: "freddy@mercury.com",
     favorite_icecream_flavors: ["strawberry", "cookie dough", "mint chip"]
@@ -78,7 +78,7 @@ puts contacts
    :name=>"Jon", :email=>"jon_snow@thewall.we", 
    :favorite_icecream_flavors=>["chocolate", "vanilla", "mint chip"], 
    :address=>"The Lord Commander's Rooms, The Wall, Westeros"}, 
-"Freddy"=> { 
+"Freddy Mercury"=> { 
    :name=>"Freddy", 
    :email=>"freddy@mercury.com", 
    :favorite_icecream_flavors=> ["cookie dough", "mint chip"]
@@ -100,7 +100,7 @@ contacts = {
     email: "jon_snow@thewall.we", 
     favorite_icecream_flavors: ["chocolate", "vanilla", "mint chip"]
   },
-  "Freddy" => {
+  "Freddy Mercury" => {
     name: "Freddy",
     email: "freddy@mercury.com",
     favorite_icecream_flavors: ["strawberry", "cookie dough", "mint chip"]
@@ -108,14 +108,14 @@ contacts = {
 }
 
 contacts.each do |person, data|
-	puts "#{person}: #{data}"
+  puts "#{person}: #{data}"
 end
 ```
 
 This should return: 
 
 ```ruby
-Jon Snow    	
+Jon Snow      
 { :name=>"Jon", 
   :email=>"jon_snow@thewall.we", 
   :favorite_icecream_flavors=>["chocolate", "vanilla", "mint chip"]
@@ -134,12 +134,12 @@ Let's iterate over the second level our our `contacts` hash. In order to access 
 
 ```ruby
 contacts.each do |person, data|
-	#at this level, "person" is Jon Snow or Freddy and "data" is a hash of key/value pairs
-	#to iterate over the "data" hash, we can use the following line: 
-	
-	data.each do |attribute, value|
-		puts "#{attribute}: #{value}
-	end
+  #at this level, "person" is Jon Snow or Freddy and "data" is a hash of key/value pairs
+  #to iterate over the "data" hash, we can use the following line: 
+  
+  data.each do |attribute, value|
+    puts "#{attribute}: #{value}
+  end
 end
 ```
 
@@ -157,27 +157,25 @@ favorite_icecream_flavors: ["strawberry", "cookie dough", "mint chip"]
 
 ```
 
-Now it's your turn. In the challenge below, you'll be *removing* and item from an array in multidimensional hash. 
-
 Let's take is one step further and print out *just the favorite ice cream flavors*. Once again, we'll need to iterate down into that level of the hash, then we can access the favorite ice cream array and print out the flavors: 
 
 ```ruby
 contacts.each do |person, data|
-	#at this level, "person" is Jon Snow or Freddy and "data" is a hash of key/value pairs
-	#to iterate over the "data" hash, we can use the following line: 
-	
-	data.each do |attribute, value|
-		#at this level, "attribute" is describes the key of :name, :email or fav. flavor
-		#we need to first check and see if the key is :favorite_icecream_flavors. 
-		#if it is, that means the VALUE is an array that we can iterate over to print out each element
-		
-		if attribute == :favorite_icecream_flavors
-			value.each do |flavor|
-				# here, each index element in an ice cream flavor string
-				puts "#{flavor}"
-			end
-		end
-	end
+  #at this level, "person" is Jon Snow or Freddy and "data" is a hash of key/value pairs
+  #to iterate over the "data" hash, we can use the following line: 
+  
+  data.each do |attribute, value|
+    #at this level, "attribute" is describes the key of :name, :email or fav. flavor
+    #we need to first check and see if the key is :favorite_icecream_flavors. 
+    #if it is, that means the VALUE is an array that we can iterate over to print out each element
+    
+    if attribute == :favorite_icecream_flavors
+      value.each do |flavor|
+        # here, each index element in an ice cream flavor string
+        puts "#{flavor}"
+      end
+    end
+  end
 end
 ```
 
@@ -194,53 +192,21 @@ mint chip
 
 Now it's your turn! You're going to iterate through the levels of this hash to operate on one of the ice cream flavor arrays. 
 
-**Reminder:** Iterating through nested hashes is hard, and (I'm pretty sure) you are not psychic. Meaning, you can't necessarily predict with perfect clarity what the key/value pair is at a certain level of the hash. **Using binding.pry** when you are iterating in upcoming labs to make sure you understand what the key/value pair is that you are iterating over. 
-
-%%%
-
-### Code Challenge I: Manipulating Nested Hashes
-
-Your good buddy Freddy Mercury has recently developed a strawberry allergy. You need to delete "strawberry" from his list of favorite icecreams. Iterate over the below array and when you reach the key of `:favorite_icecream_flavors`, check to see if the array contains strawberry, if it does, remove it. **Hint:** use the `delete_if` method to eliminate strawberry from the appropriate array.
-
-~~~ruby
-
-contacts = {
-  "Jon Snow" => {
-    name: "Jon",
-    email: "jon_snow@thewall.we", 
-    favorite_icecream_flavors: ["chocolate", "vanilla", "mint chip"]
-  },
-  "Freddy" => {
-    name: "Freddy",
-    email: "freddy@mercury.com",
-    favorite_icecream_flavors: ["strawberry", "cookie dough", "mint chip"]
-  }
-}
-
-#your code here
+**Reminder:** Iterating through nested hashes is hard, and (I'm pretty sure) you are not psychic. Meaning, you can't necessarily predict with perfect clarity what the key/value pair is at a certain level of the hash. **Use binding.pry** when you are iterating in upcoming labs to make sure you understand what the key/value pair is that you are iterating over. 
 
 
-#do NOT touch the following line!
+### Code Along Challenge I: Manipulating Nested Hashes
 
-contacts
+Fork and clone this lab. You'll be coding your solution to this first challenge in `lib/first_challenge.rb`. 
 
-~~~solution
+Your good buddy Freddy Mercury has recently developed a strawberry allergy. You need to delete "strawberry" from his list of favorite ice cream flavors. In the `first_challenge` method, we've given you the hash from our previous example. 
 
- contacts.each do |person, data|
-     data.each do |attribute, value|
-      	  if value.class == Array && value.include?("strawberry")
-           value.delete_if {|flavor| flavor == "strawberry"}
-       end
-     end
-  end
+* Iterate over the below array and when you reach the key of `:favorite_icecream_flavors` and remove `"strawberry"` from Freddy's favorite ice cream flavors. There are at least two ways you can accomplish this:
+  * You can iterate through the hash and, when you reach the appropriate level, check to see if the key `==` `:favorite_icecream_flavors`. If it does, check to see if that array contains strawberry. If it does, delete it from the array. 
+  * You can directly iterate over the hash that is the value of the "Freddy Mercury" key by calling an enumerator method in `contacts["Freddy Mercury"]`.  
+*  **Hint:** use the `delete_if` method to eliminate strawberry from the appropriate array.
+*  Remember that the `first_challenge` method needs to return the newly altered `contacts` hash. 
 
-~~~validation
-
-expect(response).to.eql({"Jon Snow"=>{:name=>"Jon", :email=>"jon_snow@thewall.we", :favorite_icecream_flavors=>["chocolate", "vanilla", "mint chip"]}, "Freddy"=>{:name=>"Freddy", :email=>"freddy@mercury.com", :favorite_icecream_flavors=>["cookie dough", "mint chip"]}});
-
-~~~
-
-%%%
 
 ## Higher Level Hash Methods
 
@@ -285,43 +251,15 @@ These are only a few of the many helpful methods out there. Be there to check ou
 
 Let's practice before you move on to the next lab: 
 
-%%% 
 
-### Code Challenge II: Manipulating Nested Hashes
+### Code Along Challenge II: Manipulating Nested Hashes
 
-Below we have a nested hash of grocery items. Use the `.values` method to collect all of the values of the grocery type keys (:dairy, :meat, etc). The end return should be *one-dimensional* array of groceries that *only includes* actual foods ("milk", "carrots"). 
+You'll be coding your solution to this challenge in `lib/second_challenge.rb`. In the `second_challenge` method we have a nested hash of grocery items. 
 
-**Hint:** What happens when you call `.values` on a nested hash? What is the return value? How can you *flatten* an array of arrays? Try out your code in IRB to help you solve this one. 
+* Use the `.values` method to collect all of the values of the grocery type keys (:dairy, :meat, etc). The end return should be a *one-dimensional* array of groceries that *only includes* actual foods ("milk", "carrots"). 
 
-~~~ruby
+**Hint:** What happens when you call `.values` on a nested hash? What is the return value? How can you *flatten* an array of arrays? Make sure to use binding.pry to help you solve this one. 
 
-groceries = {
-   dairy: ["milk", "yogurt", "cheese"],
-   vegetable: ["carrots", "broccoli", "cucumbers"],
-   meat: ["chicken", "steak", "salmon"],
-   grains: ["rice", "pasta"]
-}
-
-#code you solution here
-
-~~~solution 
-
-groceries = {
-   dairy: ["milk", "yogurt", "cheese"],
-   vegetable: ["carrots", "broccoli", "cucumbers"],
-   meat: ["chicken", "steak", "salmon"],
-   grains: ["rice", "pasta"]
-}
-
-groceries.values.flatten
-
-~~~validation
-
-expect(response).to.eql(["milk", "yogurt", "cheese", "carrots", "broccoli", "cucumbers", "chicken", "steak", "salmon", "rice", "pasta"]);
-
-~~~
-
-%%%
 
 ## Resources: 
 
