@@ -202,7 +202,8 @@ Now it's your turn! You're going to iterate through the levels of this hash to o
 
 Your good buddy Freddy Mercury has recently developed a strawberry allergy. You need to delete "strawberry" from his list of favorite icecreams. Iterate over the below array and when you reach the key of `:favorite_icecream_flavors`, check to see if the array contains strawberry, if it does, remove it. **Hint:** use the `delete_if` method to eliminate strawberry from the appropriate array.
 
-```ruby
+~~~ruby
+
 contacts = {
   "Jon Snow" => {
     name: "Jon",
@@ -235,10 +236,9 @@ contacts
 
 ~~~validation
 
-answer = {"Jon Snow"=>{:name=>"Jon", :email=>"jon_snow@thewall.we", :favorite_icecream_flavors=>["chocolate", "vanilla", "mint chip"]}, "Freddy"=>{:name=>"Freddy", :email=>"freddy@mercury.com", :favorite_icecream_flavors=>["cookie dough", "mint chip"]}} 
+expect(response).to.eql({"Jon Snow"=>{:name=>"Jon", :email=>"jon_snow@thewall.we", :favorite_icecream_flavors=>["chocolate", "vanilla", "mint chip"]}, "Freddy"=>{:name=>"Freddy", :email=>"freddy@mercury.com", :favorite_icecream_flavors=>["cookie dough", "mint chip"]}});
 
-expect(response).to.eql(answer);
-``` 
+~~~
 
 %%%
 
@@ -293,7 +293,8 @@ Below we have a nested hash of grocery items. Use the `.values` method to collec
 
 **Hint:** What happens when you call `.values` on a nested hash? What is the return value? How can you *flatten* an array of arrays? Try out your code in IRB to help you solve this one. 
 
-```ruby
+~~~ruby
+
 groceries = {
    dairy: ["milk", "yogurt", "cheese"],
    vegetable: ["carrots", "broccoli", "cucumbers"],
@@ -316,10 +317,9 @@ groceries.values.flatten
 
 ~~~validation
 
-answer = ["milk", "yogurt", "cheese", "carrots", "broccoli", "cucumbers", "chicken", "steak", "salmon", "rice", "pasta"]
+expect(response).to.eql(["milk", "yogurt", "cheese", "carrots", "broccoli", "cucumbers", "chicken", "steak", "salmon", "rice", "pasta"]);
 
-expect(response).to.eql(answer);
-```
+~~~
 
 %%%
 
