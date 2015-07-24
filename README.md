@@ -13,7 +13,8 @@ contacts = {
   "Jon Snow" => {
     name: "Jon",
     email: "jon_snow@thewall.we", 
-    favorite_icecream_flavors: ["chocolate", "vanilla"]
+    favorite_icecream_flavors: ["chocolate", "vanilla"],
+    knows: nil
   },
   "Freddy Mercury" => {
     name: "Freddy",
@@ -44,7 +45,8 @@ puts contacts
   "Jon Snow" => {
     name: "Jon",
     email: "jon_snow@thewall.we", 
-    favorite_icecream_flavors: ["chocolate", "vanilla", "mint chip"]
+    favorite_icecream_flavors: ["chocolate", "vanilla", "mint chip"],
+    knows: nil
   },
   "Freddy Mercury" => {
     name: "Freddy",
@@ -77,6 +79,7 @@ puts contacts
 "Jon Snow" => {
    :name=>"Jon", :email=>"jon_snow@thewall.we", 
    :favorite_icecream_flavors=>["chocolate", "vanilla", "mint chip"], 
+   :knows=>nil,
    :address=>"The Lord Commander's Rooms, The Wall, Westeros"}, 
 "Freddy Mercury"=> { 
    :name=>"Freddy", 
@@ -98,7 +101,8 @@ contacts = {
   "Jon Snow" => {
     name: "Jon",
     email: "jon_snow@thewall.we", 
-    favorite_icecream_flavors: ["chocolate", "vanilla", "mint chip"]
+    favorite_icecream_flavors: ["chocolate", "vanilla", "mint chip"],
+    knows: nil
   },
   "Freddy Mercury" => {
     name: "Freddy",
@@ -118,7 +122,8 @@ This should return:
 Jon Snow      
 { :name=>"Jon", 
   :email=>"jon_snow@thewall.we", 
-  :favorite_icecream_flavors=>["chocolate", "vanilla", "mint chip"]
+  :favorite_icecream_flavors=>["chocolate", "vanilla", "mint chip"],
+  :knows=>nil
 }
 
 Freddy: 
@@ -150,6 +155,7 @@ That should output the following:
 name: Jon
 email: jon_snow@thewall.we
 favorite_icecream_flavors: ["chocolate", "vanilla", "mint chip"]
+knows: nil
 
 name: Freddy
 email: freddy@mercury.com
