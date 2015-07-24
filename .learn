@@ -3,7 +3,6 @@ tags:
   - manipulating hashes
   - iteration
   - hash methods
-resources:
-	- 1
+resources: 1
 languages:
-	- ruby
+  - ruby
