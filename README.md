@@ -58,7 +58,7 @@ puts contacts
 
 #### Example 2: 
 
-Now let's say that you want to add a whole new kay/value pair to your Jon Snow contact—his address. In a simpler hash with just one level of key value pairs, we've already learned how to add new key/value pairs. Here's a reminder: 
+Now let's say that you want to add a whole new key/value pair to your Jon Snow contact—his address. In a simpler hash with just one level of key value pairs, we've already learned how to add new key/value pairs. Here's a reminder: 
 
 ```ruby
 hash = {first: "first value!", second: "second value!"}
