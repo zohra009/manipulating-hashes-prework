@@ -141,7 +141,7 @@ contacts.each do |person, data|
   #to iterate over the "data" hash, we can use the following line: 
   
   data.each do |attribute, value|
-    puts "#{attribute}: #{value}
+    puts "#{attribute}: #{value}"
   end
 end
 ```
