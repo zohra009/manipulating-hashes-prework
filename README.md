@@ -124,7 +124,7 @@ Jon Snow:
   :knows=>nil
 }
 
-Freddy: 
+Freddy Mercury: 
 { :name=>"Freddy", 
 :email=>"freddy@mercury.com", 
 :favorite_icecream_flavors=>["strawberry", "cookie dough", "mint chip"]
