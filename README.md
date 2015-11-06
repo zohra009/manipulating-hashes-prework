@@ -211,7 +211,6 @@ Your good buddy Freddy Mercury has recently developed a strawberry allergy! You 
 **Hint:** *Use the* `.delete_if` *method to eliminate strawberry from the appropriate array.*  
 **Hint:** *Remember that the* `first_challenge` *method needs to return the newly altered* `contacts` *hash.* 
 
-
 ## Higher Level Hash Methods
 
 In a previous lab, you were asked to iterate over a hash and collect the key that pointed to the lowest value. We asked you not to use some of the higher level hash methods there. Now, we're going to learn a few tricks that can make a task like that much easier. 
