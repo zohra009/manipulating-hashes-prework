@@ -267,3 +267,5 @@ You'll be coding your solution to this challenge in `lib/second_challenge.rb`. I
 ## Resources: 
 
 * [Ruby Docs on Hashes](http://ruby-doc.org/core-2.2.0/Hash.html)
+
+<a href='https://learn.co/lessons/manipulating-hashes' data-visibility='hidden'>View this lesson on Learn.co</a>
