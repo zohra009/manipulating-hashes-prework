@@ -161,7 +161,7 @@ favorite_icecream_flavors: ["strawberry", "cookie dough", "mint chip"]
 
 ```
 
-Let's take is one step further and print out *just the favorite ice cream flavors*. Once again, we'll need to iterate down into that level of the hash, then we can access the favorite ice cream array and print out the flavors: 
+Let's take this one step further and print out *just the favorite ice cream flavors*. Once again, we'll need to iterate down into that level of the hash, then we can access the favorite ice cream array and print out the flavors: 
 
 ```ruby
 contacts.each do |person, data|
