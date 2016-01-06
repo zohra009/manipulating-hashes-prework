@@ -241,7 +241,7 @@ family_members.keys
 
 ### `.min`
 
-You can use the `.min` method on a hash to return the key/value *pair* that contains that **lowest** value: 
+You can use the .min method on a hash to return the key/value pair that contains that **lowest key**, either alphabetically or numerically:
 
 ```ruby
 food_items = {apples: 45, pears: 12}
