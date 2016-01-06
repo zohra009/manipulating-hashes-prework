@@ -161,7 +161,7 @@ favorite_icecream_flavors: ["strawberry", "cookie dough", "mint chip"]
 
 ```
 
-Let's take is one step further and print out *just the favorite ice cream flavors*. Once again, we'll need to iterate down into that level of the hash, then we can access the favorite ice cream array and print out the flavors: 
+Let's take this one step further and print out *just the favorite ice cream flavors*. Once again, we'll need to iterate down into that level of the hash, then we can access the favorite ice cream array and print out the flavors: 
 
 ```ruby
 contacts.each do |person, data|
@@ -241,7 +241,7 @@ family_members.keys
 
 ### `.min`
 
-You can use the `.min` method on a hash to return the key/value *pair* that contains that **lowest** value: 
+You can use the .min method on a hash to return the key/value pair that contains that **lowest key**, either alphabetically or numerically:
 
 ```ruby
 food_items = {apples: 45, pears: 12}
@@ -267,3 +267,5 @@ You'll be coding your solution to this challenge in `lib/second_challenge.rb`. I
 ## Resources: 
 
 * [Ruby Docs on Hashes](http://ruby-doc.org/core-2.2.0/Hash.html)
+
+<a href='https://learn.co/lessons/manipulating-hashes' data-visibility='hidden'>View this lesson on Learn.co</a>
