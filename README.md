@@ -268,4 +268,4 @@ You'll be coding your solution to this challenge in `lib/second_challenge.rb`. I
 
 * [Ruby Docs on Hashes](http://ruby-doc.org/core-2.2.0/Hash.html)
 
-<a href='https://learn.co/lessons/manipulating-hashes' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/manipulating-hashes' title='Code Along Exercise: Manipulating Hashes'>Code Along Exercise: Manipulating Hashes</a> on Learn.co and start learning to code for free.</p>
